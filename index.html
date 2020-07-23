@@ -2,16 +2,39 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    </head>
-    <body>
-        <h1>
-            Weiyi Yin's Website
-        </h1>
-        <p>
-            Welcome to my first website!
-        </p>
+        <link rel="stylesheet" href="styles.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container" id="menu_bar">
+            <div class="row">
+                <div class="col" id="title">
+                    Weiyi Yin
+                </div>
+            </div>
+            <ul class="nav nav-tabs">
+                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#exp">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#hob">Hobbies</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#blog">Blog</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="about" class="tab-pane fade in active">
+                    <h3>Hello!</h3>
+                    <p>Welcome to my site!</p>
+                </div>
+                <div id="exp" class="tab-pane fade">
+                    <p>Insert Resume Here</p>
+                </div>
+                <div id="hob" class="tab-pane fade">
+                    <p>Add some pictures from hobbies</p>
+                </div>
+                <div id="blog" class="tab-pane fade">
+                    <p>Figure out if I can add a UI for inserting blog posts</p>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
