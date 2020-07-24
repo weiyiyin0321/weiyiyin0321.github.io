@@ -1,10 +1,51 @@
 #title {
-    font-size: 200%;
-    border: 5px solid black;
-    text-align: center;
-    padding: 25px;
+    font-size: 300%;
+    text-align: left;
+    font-weight: bold;
+    color: black;
+}
+
+.row.title {
+    padding-top: 50px;
+    border-bottom: 5px solid grey;
+}
+
+#content {
+    padding-top: 5px;
 }
 
 #menu_bar {
     text-align: center;
+}
+
+#social-media {
+    padding-top: 12px;
+}
+
+.fa {
+    height: 56px;
+    width: 56px;
+    border: 3px solid white;
+    text-align: center;
+    line-height: 53px;
+    float: right;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-github {
+    background: #333;
+    color: white;
 }
