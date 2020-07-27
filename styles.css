@@ -1,13 +1,17 @@
+html {
+    scroll-behavior: smooth;
+}
+
 #title {
     font-size: 300%;
     text-align: left;
     font-weight: bold;
     color: black;
+    padding-left: 25px;
 }
 
 .row.title {
     padding-top: 50px;
-    border-bottom: 5px solid grey;
 }
 
 #content {
@@ -25,7 +29,6 @@
 .fa {
     height: 56px;
     width: 56px;
-    border: 3px solid white;
     text-align: center;
     line-height: 53px;
     float: right;
@@ -38,19 +41,43 @@
 .fa-facebook {
     background: #3B5998;
     color: white;
+    border: 3px solid white;
 }
 
 .fa-linkedin {
     background: #007bb5;
     color: white;
+    border: 3px solid white;
 }
 
 .fa-github {
     background: #333;
     color: white;
+    border-left: 3px solid white;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
 }
 
 .work-exp {
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.corp-logo-div {
+    text-align: center;
+}
+
+.img-vert-center-helper {
+    vertical-align: middle;
+    display: inline-block;
+    height: 100%;
+}
+
+.corp-logo-img {
+    vertical-align: middle;
+}
+
+.page {
+    height: 100vh;
+    padding-top: 5%
 }
