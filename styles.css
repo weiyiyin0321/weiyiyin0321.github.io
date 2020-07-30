@@ -59,12 +59,21 @@ html {
 }
 
 .work-exp {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    height: 100%;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
 }
 
 .corp-logo-div {
     text-align: center;
+    padding-bottom: 20%;
+}
+
+.corp-exp-desc {
+    padding-bottom: 20%;
 }
 
 .img-vert-center-helper {
@@ -85,7 +94,6 @@ html {
 /* horizontal scroll */
 
 .scroll-vert-long {
-    border: 3px solid black;
     width: 100%;
 }
 
@@ -97,9 +105,14 @@ html {
     overflow-x: hidden;
 }
 
+.scroll-static {
+    /* position: absolute; */
+    height: 65%;
+}
+
 .scroll-horizontal {
-    position: absolute;
-    height: 100%;
+    /* position: absolute; */
+    height: 35%;
     will-change: transform;
     /* transform: translateX(-75px); */
 }

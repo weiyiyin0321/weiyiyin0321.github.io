@@ -7,7 +7,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     </head>
     <body>
         <div class="container">
@@ -29,60 +29,68 @@
                     <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
                 </ul>
             </nav>
-            <div data-spy="scroll" data-target="#menu" data-offset="0">
+            <div id='content'>
                 <div id="about" class="page">
                     <div class="container">
                         <h3>Hello!</h3>
                         <p>I'm Wei. I'm a data scientist, strategic thinker, and life long learner.</p>
                     </div>
                 </div>
-                <div id="exp-test" class="scroll-vert-long">
+                <div id="exp" class="scroll-vert-long">
                     <div class="container scroll-sticky">
+                        <div class="row scroll-static" style="background-color: aqua;">
+                            <div class="row" style="padding-top: 5%;">
+                                <div class="col">
+                                    <h3>My Experiences</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col" id="skill-chart"></div>
+                            </div>
+                        </div>
                         <div class="row scroll-horizontal">
-                            <div class="col-4 scroll-content" style="background-color: red;"></div>
-                            <div class="col-4 scroll-content" style="background-color: blue;"></div>
-                            <div class="col-4 scroll-content" style="background-color: green;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="exp" class="page">
-                    <div class="container">
-                        <h3>Experience</h3>
-                        <div class="row work-exp" id="ctl">
-                            <div class="col-3 corp-logo-div">
-                                <span class="img-vert-center-helper"></span><img src='./media/ctl_logo.png' class='img-fluid corp-logo-img'>
+                            <div class="col-4 scroll-content">
+                                <div class="row work-exp vertical-align" id="ctl">
+                                    <div class="col-5 corp-logo-div">
+                                        <span class="img-vert-center-helper"></span><img src='./media/ctl_logo.png' class='img-fluid corp-logo-img'>
+                                    </div>
+                                    <div class="col-7 corp-exp-desc">
+                                        I am currently a <strong>data science team lead</strong>. My team and I tackle a wide 
+                                        variety of complex business problems in areas such as marketing, 
+                                        sales operations, and finance. We help our stakeholders make the 
+                                        most informed and data-driven decision by providing objective data 
+                                        analytics and building machine learnings models. 
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-9">
-                                I am currently a <strong>data science team lead</strong>. My team and I tackle a wide 
-                                variety of complex business problems in areas such as marketing, 
-                                sales operations, and finance. We help our stakeholders make the 
-                                most informed and data-driven decision by providing objective data 
-                                analytics and building machine learnings models. 
+                            <div class="col-4 scroll-content">
+                                <div class="row work-exp vertical-align", id="lvlt">
+                                    <div class="col-5 corp-logo-div">
+                                        <span class="img-vert-center-helper"></span><img src='./media/Level3_Logo.svg' class="img-fluid corp-logo-img" width=80%>
+                                    </div>
+                                    <div class="col-7 corp-exp-desc">
+                                        As a <strong>corporate strategy associate</strong>, I was the analytics workhorse of 
+                                        the Level 3 corporate strategy team. We acted as internal management
+                                        consultants and helped solve various issues in the company. Some major
+                                        projects include product specific deep dives to identify problem areas
+                                        causing underperformance and building a business case for launch a major
+                                        network expansion in a foreign country.
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row work-exp", id="lvlt">
-                            <div class="col-3 corp-logo-div">
-                                <span class="img-vert-center-helper"></span><img src='./media/Level3_Logo.svg' class="img-fluid corp-logo-img" width=80%>
-                            </div>
-                            <div class="col-9">
-                                As a <strong>corporate strategy associate</strong>, I was the analytics workhorse of 
-                                the Level 3 corporate strategy team. We acted as internal management
-                                consultants and helped solve various issues in the company. Some major
-                                projects include product specific deep dives to identify problem areas
-                                causing underperformance and building a business case for launch a major
-                                network expansion in a foreign country.
-                            </div>
-                        </div>
-                        <div class="row work-exp" id="citi">
-                            <div class="col-3 corp-logo-div">
-                                <span class="img-vert-center-helper"></span><img src="./media/citi_logo.png", class="img-fluid corp-logo-img", width="40%">
-                            </div>
-                            <div class="col-9">
-                                As a <strong>financial analyst</strong> in the global retail bank, I was
-                                responsible for financial reporting and performance analytics on a $12 billion 
-                                a year segment of the Citibank business. I created the logic for allocating these 
-                                financials to the retail banking customer segments. I was also involved in launching 
-                                Citi Priority, a banking product bundle aimed at young, high potential banking clients.
+                            <div class="col-4 scroll-content">
+                                <div class="row work-exp vertical-align" id="citi">
+                                    <div class="col-5 corp-logo-div">
+                                        <span class="img-vert-center-helper"></span><img src="./media/citi_logo.png", class="img-fluid corp-logo-img", width="40%">
+                                    </div>
+                                    <div class="col-7 corp-exp-desc">
+                                        As a <strong>financial analyst</strong> in the global retail bank, I was
+                                        responsible for financial reporting and performance analytics on a $12 billion 
+                                        a year segment of the Citibank business. I created the logic for allocating these 
+                                        financials to the retail banking customer segments. I was also involved in launching 
+                                        Citi Priority, a banking product bundle aimed at young, high potential banking clients.
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

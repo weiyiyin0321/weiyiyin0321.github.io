@@ -26,9 +26,10 @@ window.addEventListener('scroll', function(e) {
     scroll_position = window.scrollY;
     for (i = 0; i < scroll_vert_long.length; i++) {
         let rect = scroll_vert_long[i].getBoundingClientRect();
-        let relative_x = scroll_position - rect.topl
-        let end_scroll_x = scroll_vert_long[i].clientHeight - scroll_vert_long[i].clientWidth;
+        let relative_x = -rect.top
         let scroll_horizontal = scroll_vert_long[i].getElementsByClassName('scroll-horizontal')[0]
+        let scroll_content = scroll_horizontal.getElementsByClassName('scroll-content')[0]
+        let end_scroll_x = scroll_horizontal.clientWidth - scroll_content.clientWidth;
         if ((relative_x > 0) & (relative_x < end_scroll_x)) {
             scroll_horizontal.style.transform = "translateX(-" + relative_x + "px)"
         } else if (relative_x <= 0) {
