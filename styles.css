@@ -26,6 +26,10 @@ html {
     padding-top: 12px;
 }
 
+.chart-col {
+    height: 100%;
+}
+
 .fa {
     height: 56px;
     width: 56px;
