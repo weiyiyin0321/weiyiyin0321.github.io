@@ -125,3 +125,38 @@ html {
     height: 100%;
     display: inline-block;
 }
+
+.transition-text-3 > div {
+    width: 49%;
+    display: inline-block;
+  }
+  
+.transition-text-3 > div:nth-child(1) {
+    text-align: right;
+}
+  
+.transition-text-3 > div:nth-child(2) > div {
+    opacity: 0%;
+    height: 0px;
+}
+  
+.transition-text-3 > div:nth-child(2) > div:nth-child(1) {
+    animation: animation 12s infinite;
+}
+  
+.transition-text-3 > div:nth-child(2) > div:nth-child(2) {
+    animation: animation 12s infinite;
+    animation-delay: 4s;
+}
+
+.transition-text-3 > div:nth-child(2) > div:nth-child(3) {
+    animation: animation 12s infinite;
+    animation-delay: 8s;
+}
+  
+@keyframes animation {
+    0% {opacity: 0; height: 0px;}
+    16% {opacity: 1;}
+    33% {opacity: 0; height: 0px;}
+    100% {opacity: 0; height: 0px;}
+}
